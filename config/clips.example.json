@@ -1,0 +1,17 @@
+{
+  "title": "Example review selection",
+  "clips": [
+    {
+      "id": "example-001",
+      "source_id": "recording-001",
+      "source_path": "../jobs/source.mp4",
+      "source_url": "",
+      "start": 1.0,
+      "end": 3.0,
+      "review_status": "pending",
+      "performer": "user-supplied label",
+      "attribution_basis": "source label",
+      "notes": "Replace this example with a reviewed continuous excerpt."
+    }
+  ]
+}

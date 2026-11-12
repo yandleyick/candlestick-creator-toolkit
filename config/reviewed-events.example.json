@@ -1,0 +1,15 @@
+{
+  "scope": "Example only; these are not detected or confirmed events.",
+  "events": [
+    {
+      "source_id": "vod-001",
+      "source_seconds": 12.3,
+      "role": "killer",
+      "player_alias": "CANDLESTICK",
+      "hero": "Tracer",
+      "target_kind": "player",
+      "review_status": "pending",
+      "evidence": []
+    }
+  ]
+}

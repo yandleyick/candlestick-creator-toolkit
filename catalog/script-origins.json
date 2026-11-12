@@ -1,0 +1,121 @@
+[
+  {
+    "original_project": "TRACER_VOD_HUNT_20261104",
+    "original_file": "tools/sample_killfeed.py",
+    "original_sha256": "f520b620b4187c5abf6aedf37e0d66ef55ea522d84fe680214d605d2701f1075",
+    "destination": "scripts/overwatch/sample_killfeed.py",
+    "changes": "Removed workstation dependency paths; executable overrides and required player alias added where applicable."
+  },
+  {
+    "original_project": "TRACER_VOD_HUNT_20261104",
+    "original_file": "tools/scan_killfeed.py",
+    "original_sha256": "a272fec45b8112b4b4687f2e654533717218fdeab20d9bf514a8b0e193de0003",
+    "destination": "scripts/overwatch/scan_killfeed.py",
+    "changes": "Removed workstation dependency paths; executable overrides and required player alias added where applicable."
+  },
+  {
+    "original_project": "TRACER_VOD_HUNT_20261104",
+    "original_file": "tools/glyph_names.py",
+    "original_sha256": "fafed4e08ed1d32b49ff6d8b85bbd3f921d07a1f444822a85d3a81594f47dc08",
+    "destination": "scripts/overwatch/glyph_names.py",
+    "changes": "Removed workstation dependency paths; executable overrides and required player alias added where applicable."
+  },
+  {
+    "original_project": "TRACER_VOD_HUNT_20261104",
+    "original_file": "tools/identity_tools.py",
+    "original_sha256": "37cb9b8d68f6c20ad8640c494734301651b305022a6e4e5ab7ed236c65ab9539",
+    "destination": "scripts/overwatch/identity_tools.py",
+    "changes": "Removed workstation dependency paths; executable overrides and required player alias added where applicable."
+  },
+  {
+    "original_project": "TRACER_VOD_HUNT_20261104",
+    "original_file": "tools/build_life_candidates.py",
+    "original_sha256": "76400f1e8a3a91f2c22806360b15ece842876b557673b3fdc3c37fb39f0d3eb3",
+    "destination": "scripts/overwatch/build_life_candidates.py",
+    "changes": "Removed workstation dependency paths; executable overrides and required player alias added where applicable."
+  },
+  {
+    "original_project": "TRACER_VOD_HUNT_20261104",
+    "original_file": "tools/ocr_server.ps1",
+    "original_sha256": "99bc9fde26cdf4c1288094e368d6e572b28ed7a102b90a5ad828a20d84a18a85",
+    "destination": "scripts/overwatch/ocr_server.ps1",
+    "changes": "Removed workstation dependency paths; executable overrides and required player alias added where applicable."
+  },
+  {
+    "original_project": "TRACER_VOD_HUNT_20261104",
+    "original_file": "tools/name_glyph.png",
+    "original_sha256": "ffdbdcb49b19bd2dcbf02b24f5ddfa42dc82330ceed04225d2d63a44f5ba9d58",
+    "destination": "scripts/overwatch/name_glyph.png",
+    "changes": "Calibration image copied. Recalibrate for changed HUD, language, or scale."
+  },
+  {
+    "original_project": "TRACER_VOD_HUNT_20261104",
+    "original_file": "tools/name_glyph_CANDLESTICK.png",
+    "original_sha256": "f89a6674540a43b0e7a4226f5a4f76516b5652e2213da7a361ee631d23ec6a04",
+    "destination": "scripts/overwatch/name_glyph_CANDLESTICK.png",
+    "changes": "Calibration image copied. Recalibrate for changed HUD, language, or scale."
+  },
+  {
+    "original_project": "TRACER_VOD_HUNT_20261104",
+    "original_file": "tools/name_glyph_FNRGFE.png",
+    "original_sha256": "9e61605a238c864cc4ada6879f26c4df134e2fc637f64896481cf17fa9317cab",
+    "destination": "scripts/overwatch/name_glyph_FNRGFE.png",
+    "changes": "Calibration image copied. Recalibrate for changed HUD, language, or scale."
+  },
+  {
+    "original_project": "TRACER_VOD_HUNT_20261104",
+    "original_file": "tools/name_glyph_JMCLENDON.png",
+    "original_sha256": "19f82f4d6197d86fe348d5db3235028eafb758f6512733c555641caa48f33253",
+    "destination": "scripts/overwatch/name_glyph_JMCLENDON.png",
+    "changes": "Calibration image copied. Recalibrate for changed HUD, language, or scale."
+  },
+  {
+    "original_project": "TRACER_VOD_HUNT_20261104",
+    "original_file": "tools/name_glyph_JMCLENDON_bright.png",
+    "original_sha256": "d28c6c3f8ffde59a49426af49dcc09a6ab904c1bef5f480c57d11dc477987b68",
+    "destination": "scripts/overwatch/name_glyph_JMCLENDON_bright.png",
+    "changes": "Calibration image copied. Recalibrate for changed HUD, language, or scale."
+  },
+  {
+    "original_project": "TRACER_VOD_HUNT_20261104",
+    "original_file": "tools/name_gray_JMCLENDON.png",
+    "original_sha256": "af5d2ff4b68bfdfca0efa5d43065a448d6703ef0431d7bb987263575dc198ef4",
+    "destination": "scripts/overwatch/name_gray_JMCLENDON.png",
+    "changes": "Calibration image copied. Recalibrate for changed HUD, language, or scale."
+  },
+  {
+    "original_project": "TRACER_VOD_HUNT_20261104",
+    "original_file": "tools/name_gray_TORTAXIDXAMP.png",
+    "original_sha256": "5cda69e32794a24d56987d4347301bec149eed848180d9eae81d4914715ee169",
+    "destination": "scripts/overwatch/name_gray_TORTAXIDXAMP.png",
+    "changes": "Calibration image copied. Recalibrate for changed HUD, language, or scale."
+  },
+  {
+    "original_project": "TRACER_VOD_HUNT_20261104",
+    "original_file": "tools/name_gray_WEILAND.png",
+    "original_sha256": "590d1655bcb8b40993e2575403dbdd32777fbaec6af49a68e66205001bbea4ca",
+    "destination": "scripts/overwatch/name_gray_WEILAND.png",
+    "changes": "Calibration image copied. Recalibrate for changed HUD, language, or scale."
+  },
+  {
+    "original_project": "TRACER_VOD_HUNT_20261104",
+    "original_file": "tools/tracer_feed.png",
+    "original_sha256": "b0c51eb459a0648daf222515b361dec729d8ad12045165902730bf0293f1ebd4",
+    "destination": "scripts/overwatch/tracer_feed.png",
+    "changes": "Calibration image copied. Recalibrate for changed HUD, language, or scale."
+  },
+  {
+    "original_project": "TRACER_VOD_HUNT_20261104",
+    "original_file": "tools/tracer_hud.png",
+    "original_sha256": "d17f4b1617f30cd2e12cc52971c8d33804ef6b662cd9f66aa1cb8fff0b00d161",
+    "destination": "scripts/overwatch/tracer_hud.png",
+    "changes": "Calibration image copied. Recalibrate for changed HUD, language, or scale."
+  },
+  {
+    "original_project": "TRACER_VOD_HUNT_20261104",
+    "original_file": "tools/tracer_hud_track.png",
+    "original_sha256": "251ac40a24647b053c6a7340c298ae2e12c79e23938f685a62b89b3b728da611",
+    "destination": "scripts/overwatch/tracer_hud_track.png",
+    "changes": "Calibration image copied. Recalibrate for changed HUD, language, or scale."
+  }
+]

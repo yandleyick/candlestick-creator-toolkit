@@ -1,0 +1,250 @@
+{
+  "recorded_on": "2026-10-20",
+  "scope": "Historical named decisions, not current recommendations. Later additions can supersede these decisions.",
+  "items": [
+    {
+      "name": "GIMP",
+      "reason": "Krita, ImageMagick and Photopea cover the initial image-editing kit; avoid a second large raster editor."
+    },
+    {
+      "name": "Paint.NET",
+      "reason": "Initial raster editor role is covered by Krita and Photopea."
+    },
+    {
+      "name": "Upscayl",
+      "reason": "Existing project-specific upscale workflows are preserved; another model collection is deferred until a concrete need."
+    },
+    {
+      "name": "PNGQuant",
+      "reason": "Image compression is initially covered by ImageMagick and Squoosh; specialist lossy PNG processing can be added when needed."
+    },
+    {
+      "name": "Blender",
+      "reason": "Large 3D suite deferred until a specific 3D project requires it."
+    },
+    {
+      "name": "DaVinci Resolve",
+      "reason": "Already installed; existing editor retained."
+    },
+    {
+      "name": "OBS",
+      "reason": "Already installed; existing recording setup retained."
+    },
+    {
+      "name": "VLC",
+      "reason": "Already installed; existing player retained."
+    },
+    {
+      "name": "HandBrake",
+      "reason": "Transcoding is covered by the full FFmpeg suite; an additional graphical front end is deferred."
+    },
+    {
+      "name": "Shutter Encoder",
+      "reason": "Conversion and remuxing are covered by FFmpeg and LosslessCut."
+    },
+    {
+      "name": "MKVToolNix",
+      "reason": "Routine container work is covered by FFmpeg and LosslessCut; specialized Matroska editing is deferred."
+    },
+    {
+      "name": "Kdenlive",
+      "reason": "Resolve is already installed for timeline editing."
+    },
+    {
+      "name": "Shotcut",
+      "reason": "Resolve is already installed for timeline editing."
+    },
+    {
+      "name": "OpenShot",
+      "reason": "Resolve is already installed for timeline editing."
+    },
+    {
+      "name": "mpv",
+      "reason": "VLC and ffplay cover the initial playback role."
+    },
+    {
+      "name": "Sonic Visualizer",
+      "reason": "Specialist audio-analysis UI deferred; Audacity and FFmpeg cover the initial inspection tools."
+    },
+    {
+      "name": "Spek",
+      "reason": "Separate spectrogram viewer deferred; Audacity and FFmpeg cover that initial role."
+    },
+    {
+      "name": "MP3Tag",
+      "reason": "Dedicated music-library tagging workflow deferred; fre:ac and ExifTool cover immediate metadata needs."
+    },
+    {
+      "name": "MusicBrainz Picard",
+      "reason": "Large library retagging is not currently requested."
+    },
+    {
+      "name": "Foobar2000",
+      "reason": "Additional music player deferred; Spotify and VLC are already installed."
+    },
+    {
+      "name": "MusicBee",
+      "reason": "Additional music-library player deferred."
+    },
+    {
+      "name": "REAPER",
+      "reason": "DAW choice and license are workflow-specific; existing production setup retained."
+    },
+    {
+      "name": "FL Studio",
+      "reason": "Commercial DAW choice and license are workflow-specific."
+    },
+    {
+      "name": "Zotero",
+      "reason": "Research-library setup deferred; ZoteroBib saved for immediate citation work."
+    },
+    {
+      "name": "Anki",
+      "reason": "Flashcard application deferred until an actual study/deck workflow is chosen."
+    },
+    {
+      "name": "OpenRefine",
+      "reason": "Specialist data-cleaning application deferred until a dataset requires it."
+    },
+    {
+      "name": "ImageJ",
+      "reason": "Scientific-image-analysis suite deferred until a relevant project."
+    },
+    {
+      "name": "Fiji",
+      "reason": "Scientific-image-analysis suite deferred until a relevant project."
+    },
+    {
+      "name": "DevToys",
+      "reason": "Overlaps selected command line tools and browser utilities; avoid another application runtime."
+    },
+    {
+      "name": "N8N",
+      "reason": "Persistent automation server needs a concrete workflow and hosting choice."
+    },
+    {
+      "name": "Docker",
+      "reason": "Container runtime and background services deferred until a project requires them."
+    },
+    {
+      "name": "NanaZip",
+      "reason": "PeaZip and its bundled 7-Zip cover archive work without shell integration."
+    },
+    {
+      "name": "7-Zip",
+      "reason": "7-Zip is already included inside the selected PeaZip package; separate installer skipped."
+    },
+    {
+      "name": "WinRAR",
+      "reason": "Archive role covered by PeaZip and bundled 7-Zip."
+    },
+    {
+      "name": "WinSCP",
+      "reason": "SSH is already available and rclone covers transfers; GUI server-management workflow deferred."
+    },
+    {
+      "name": "Syncthing",
+      "reason": "Background synchronization needs an explicit folder and device plan."
+    },
+    {
+      "name": "Resilio",
+      "reason": "Background synchronization needs an explicit folder and device plan."
+    },
+    {
+      "name": "Wireshark",
+      "reason": "Packet capture needs a concrete diagnostic task and capture-driver decision."
+    },
+    {
+      "name": "Safing Portmaster",
+      "reason": "Changes firewall and network behavior; no current configuration task."
+    },
+    {
+      "name": "NETworkManager",
+      "reason": "Network-management suite deferred; browser diagnostics and built-in tools cover the initial kit."
+    },
+    {
+      "name": "MSI Afterburner",
+      "reason": "Already installed; no tuning changed."
+    },
+    {
+      "name": "MSI Kombustor",
+      "reason": "GPU stress testing deferred until an actual diagnostic need."
+    },
+    {
+      "name": "GPU Tweak III",
+      "reason": "Overlaps installed Afterburner and can change device tuning."
+    },
+    {
+      "name": "EVGA Precision X1",
+      "reason": "Overlaps installed Afterburner and is hardware-specific."
+    },
+    {
+      "name": "Ryzen Master",
+      "reason": "CPU tuning requires a specific diagnosis and test plan."
+    },
+    {
+      "name": "AMD-APU-Tuning-Utility",
+      "reason": "Hardware-specific tuning is not needed for this toolkit."
+    },
+    {
+      "name": "SCSKiller",
+      "reason": "Broad system/service changes are not needed for collecting tools."
+    },
+    {
+      "name": "ReShade",
+      "reason": "Game-specific graphics injection needs a named game and desired effect."
+    },
+    {
+      "name": "Special K",
+      "reason": "Game-specific injection and tuning need a named target and compatibility review."
+    },
+    {
+      "name": "Lossless Scaling",
+      "reason": "Paid and game-specific; existing interpolation workflow is separate."
+    },
+    {
+      "name": "OptiScaler",
+      "reason": "Game-specific graphics replacement needs a named target and compatibility review."
+    },
+    {
+      "name": "Magpie",
+      "reason": "Game/window scaling needs a concrete target before setup."
+    },
+    {
+      "name": "DLSS Swapper",
+      "reason": "Game-library changes need a named target and compatibility review."
+    },
+    {
+      "name": "RTX Features Update",
+      "reason": "Game-library changes need a named target and compatibility review."
+    },
+    {
+      "name": "dxvk",
+      "reason": "Game-specific rendering changes are deferred."
+    },
+    {
+      "name": "DLSSG to FSR3",
+      "reason": "Game-specific rendering changes are deferred."
+    },
+    {
+      "name": "RTSS",
+      "reason": "Overlay setup is deferred; performance capture tools are collected without adding a resident overlay."
+    },
+    {
+      "name": "Fraps",
+      "reason": "Existing OBS and newly collected frame-time tools cover recording and measurement."
+    },
+    {
+      "name": "SSTap",
+      "reason": "Network-routing changes are outside the current collection task."
+    },
+    {
+      "name": "PhotoMosh",
+      "reason": "Current site redirects to Mosh-Pro; desktop app is paid and the free browser version has limited, watermarked exports."
+    },
+    {
+      "name": "Mosh-Pro",
+      "reason": "Paid desktop effects app; no purchase or trial installation."
+    }
+  ]
+}

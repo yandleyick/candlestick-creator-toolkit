@@ -1,0 +1,528 @@
+{
+  "method": "HEAD requests; errors are not definitive evidence that a site is down",
+  "results": [
+    {
+      "id": "peazip",
+      "url": "https://github.com/peazip/PeaZip/releases/tag/11.4.0",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "imagemagick",
+      "url": "https://github.com/ImageMagick/ImageMagick/releases/tag/7.1.2-34",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "audacity",
+      "url": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.1",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "localsend",
+      "url": "https://github.com/localsend/localsend/releases/tag/v1.18.2",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "jq",
+      "url": "https://github.com/jqlang/jq/releases/tag/jq-1.8.2",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "fd",
+      "url": "https://github.com/sharkdp/fd/releases/tag/v10.5.0",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "uv",
+      "url": "https://github.com/astral-sh/uv/releases/tag/0.13.4",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "czkawka",
+      "url": "https://github.com/qarmin/czkawka/releases/tag/12.0.2",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "aria2",
+      "url": "https://github.com/aria2/aria2/releases/tag/release-1.37.0",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "losslesscut",
+      "url": "https://github.com/mifi/lossless-cut/releases/tag/v3.70.1",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "croc",
+      "url": "https://github.com/schollz/croc/releases/tag/v11.5.5",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "ytdlp",
+      "url": "https://github.com/yt-dlp/yt-dlp/releases/tag/2026.08.19",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "subtitleedit",
+      "url": "https://github.com/SubtitleEdit/subtitleedit/releases/tag/v5.3.0",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "qalculate",
+      "url": "https://github.com/Qalculate/qalculate-gtk/releases/tag/v5.13.0",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "rclone",
+      "url": "https://github.com/rclone/rclone/releases/tag/v1.75.2",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "freac",
+      "url": "https://github.com/enzo1982/freac/releases/tag/v1.1.7",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "deno",
+      "url": "https://github.com/denoland/deno/releases/tag/v2.9.7",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "everything",
+      "url": "https://www.voidtools.com/downloads/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "krita",
+      "url": "https://krita.org/en/download/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "inkscape",
+      "url": "https://inkscape.org/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "presentmon",
+      "url": "https://github.com/GameTechDev/PresentMon/releases/tag/v2.6.0",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "mediainfo",
+      "url": "https://mediaarea.net/en/MediaInfo",
+      "status": null,
+      "result": "URLError"
+    },
+    {
+      "id": "dotnet-desktop",
+      "url": "https://dotnet.microsoft.com/download/dotnet/10.0",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "vscode",
+      "url": "https://code.visualstudio.com/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "exiftool",
+      "url": "https://exiftool.org/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "ffmpeg",
+      "url": "https://www.gyan.dev/ffmpeg/builds/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "capframex",
+      "url": "https://www.capframex.com/download",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "qpdf",
+      "url": "https://github.com/qpdf/qpdf/releases/tag/v12.4.2",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "dotnet-core",
+      "url": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/10.0/releases.json",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "resolve",
+      "url": "https://www.blackmagicdesign.com/products/davinciresolve",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "obs",
+      "url": "https://obsproject.com/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "vlc",
+      "url": "https://www.videolan.org/vlc/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "equalizerapo",
+      "url": "https://sourceforge.net/projects/equalizerapo/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "afterburner",
+      "url": "https://www.msi.com/Landing/afterburner/graphics-cards",
+      "status": 403,
+      "result": "manual check needed; HEAD may be blocked"
+    },
+    {
+      "id": "hwmonitor",
+      "url": "https://www.cpuid.com/softwares/hwmonitor.html",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "git",
+      "url": "https://git-scm.com/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "node",
+      "url": "https://nodejs.org/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "python",
+      "url": "https://www.python.org/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "curl",
+      "url": "https://curl.se/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "ssh",
+      "url": "https://github.com/PowerShell/Win32-OpenSSH",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "rife",
+      "url": "https://github.com/nihui/rife-ncnn-vulkan",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "audiosep-python",
+      "url": "https://github.com/Audio-AGI/AudioSep",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "ffmpeg-legacy",
+      "url": "https://ffmpeg.org/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "photopea",
+      "url": "https://www.photopea.com/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "squoosh",
+      "url": "https://squoosh.app/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "coolors",
+      "url": "https://coolors.co/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "excalidraw",
+      "url": "https://excalidraw.com/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "backloggd",
+      "url": "https://www.backloggd.com/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "opencritic",
+      "url": "https://opencritic.com/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "igdb",
+      "url": "https://www.igdb.com/",
+      "status": 403,
+      "result": "manual check needed; HEAD may be blocked"
+    },
+    {
+      "id": "steamdb-ratings",
+      "url": "https://steamdb.info/stats/gameratings/",
+      "status": 403,
+      "result": "manual check needed; HEAD may be blocked"
+    },
+    {
+      "id": "doesitplay",
+      "url": "https://www.doesitplay.org/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "tunebat",
+      "url": "https://tunebat.com/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "tone-generator",
+      "url": "https://www.szynalski.com/tone-generator/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "musickit",
+      "url": "https://musickit.jull.dev/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "hydrogenaudio-knowledgebase",
+      "url": "https://wiki.hydrogenaudio.org/",
+      "status": 403,
+      "result": "manual check needed; HEAD may be blocked"
+    },
+    {
+      "id": "desmos",
+      "url": "https://www.desmos.com/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "geogebra",
+      "url": "https://www.geogebra.org/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "wolfram-alpha",
+      "url": "https://www.wolframalpha.com/",
+      "status": 404,
+      "result": "manual check needed; HEAD may be blocked"
+    },
+    {
+      "id": "zoterobib",
+      "url": "https://zbib.org/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "researchrabbit",
+      "url": "https://www.researchrabbit.ai/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "wiktionary",
+      "url": "https://www.wiktionary.org/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "devdocs",
+      "url": "https://devdocs.io/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "can-i-use",
+      "url": "https://caniuse.com/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "regex101",
+      "url": "https://regex101.com/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "codepen",
+      "url": "https://codepen.io/",
+      "status": 403,
+      "result": "manual check needed; HEAD may be blocked"
+    },
+    {
+      "id": "cyberchef",
+      "url": "https://gchq.github.io/CyberChef/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "cloudflare-speed-test",
+      "url": "https://speed.cloudflare.com/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "fast",
+      "url": "https://fast.com/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "globalping",
+      "url": "https://globalping.io/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "mxtoolbox",
+      "url": "https://mxtoolbox.com/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "ableton",
+      "url": "https://www.ableton.com/live/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "premiere",
+      "url": "https://www.adobe.com/products/premiere.html",
+      "status": 403,
+      "result": "manual check needed; HEAD may be blocked"
+    },
+    {
+      "id": "motiv-mix",
+      "url": "https://www.shure.com/en-US/products/software/motiv-mix",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "mosh-pro",
+      "url": "https://moshpro.app/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "nafnet",
+      "url": "https://github.com/megvii-research/NAFNet",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "restormer",
+      "url": "https://github.com/swz30/Restormer",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "realesrgan",
+      "url": "https://github.com/xinntao/Real-ESRGAN",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "rife-pytorch",
+      "url": "https://github.com/hzwer/ECCV2022-RIFE",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "faster-whisper",
+      "url": "https://github.com/SYSTRAN/faster-whisper",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "opencv",
+      "url": "https://opencv.org/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "numpy",
+      "url": "https://numpy.org/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "pillow",
+      "url": "https://python-pillow.github.io/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "windows-ocr",
+      "url": "https://learn.microsoft.com/en-us/uwp/api/windows.media.ocr.ocrengine",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "tripo",
+      "url": "https://www.tripo3d.ai/",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "ripgrep",
+      "url": "https://github.com/BurntSushi/ripgrep",
+      "status": 200,
+      "result": "reachable"
+    },
+    {
+      "id": "ffprobe",
+      "url": "https://ffmpeg.org/ffprobe.html",
+      "status": 200,
+      "result": "reachable"
+    }
+  ],
+  "checked_on": "2026-11-11"
+}
