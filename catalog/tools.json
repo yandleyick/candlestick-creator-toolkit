@@ -1,6 +1,6 @@
 {
   "updated_on": "2026-11-20",
-  "scope": "Third-party tools and resources, followed by two original creator workflows.",
+  "scope": "Third-party tools and resources, followed by original creator workflows.",
   "tools": [
     {
       "id": "peazip",
@@ -668,6 +668,13 @@
     }
   ],
   "original_workflows": [
+    {
+      "name": "Freestyle editor",
+      "author": "Candlestick (yandleyick)",
+      "guide": "docs/FREESTYLE.md",
+      "source": "scripts/media.py",
+      "purpose": "Review passages from a recording, adjust clip boundaries, create captions, and export approved cuts."
+    },
     {
       "name": "Overwatch scanner",
       "author": "Candlestick (yandleyick)",

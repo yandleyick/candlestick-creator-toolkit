@@ -164,7 +164,8 @@ Many entries were discovered through [FMHY](https://fmhy.net/). The [catalog](ca
 
 ## Made by Candlestick (yandleyick)
 
-I made these two workflows. Both use third-party libraries listed above. [Windows setup](docs/SETUP.md)
+I made these workflows. [Windows setup](docs/SETUP.md)
 
+- **[Freestyle editor](docs/FREESTYLE.md)** — Review passages from a recording, adjust clip boundaries, create captions, and export approved cuts. [Source](scripts/media.py)
 - **[Overwatch scanner](docs/OVERWATCH.md)** — Reads the kill feed and groups possible Tracer final blows from the same life for review. [Source](scripts/overwatch)
 - **[Restoration workflow](docs/RESTORATION.md)** — Recovers fine brightness detail in 8-bit and 16-bit PNG frames while preserving their dimensions and bit depth. [Source](scripts/restore_frames.py)
