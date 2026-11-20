@@ -164,8 +164,11 @@ Many entries were discovered through [FMHY](https://fmhy.net/). The [catalog](ca
 
 ## Made by Candlestick (yandleyick)
 
-I made these workflows. [Windows setup](docs/SETUP.md)
+I made these tools and workflows. [Windows setup](docs/SETUP.md)
 
+- **[Konr Wings](tools/konr-wings)** — Overwatch crosshair overlay for the LG `GSM5CEC` display. Press **Ctrl + Alt + W** to switch between Rainbow and Deep Black. [Download for Windows](https://raw.githubusercontent.com/yandleyick/candlestick-creator-toolkit/main/downloads/konr-wings.zip)
+- **[ILYFFMPEG](https://ilyffmpeg.yandleyick.com/)** — Paste a YouTube link to download video, or audio for a still-image upload.
+- **[ILYMFFMPEG](https://ilymffmpeg.yandleyick.com/)** — Paste a webpage link to find its main video player and download the source file.
 - **[Freestyle editor](docs/FREESTYLE.md)** — Review passages from a recording, adjust clip boundaries, create captions, and export approved cuts. [Source](scripts/media.py)
 - **[Rate Freestyle](docs/RATE-FREESTYLE.md)** — Score lyrical complexity, depth, and how ideas build across a passage. Compare performances using timed excerpts. [Download plugin](https://raw.githubusercontent.com/yandleyick/candlestick-creator-toolkit/main/downloads/rate-freestyle-plugin.zip)
 - **[Overwatch scanner](docs/OVERWATCH.md)** — Reads the kill feed and groups possible Tracer final blows from the same life for review. [Source](scripts/overwatch)

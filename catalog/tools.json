@@ -669,6 +669,26 @@
   ],
   "original_workflows": [
     {
+      "name": "Konr Wings",
+      "author": "Candlestick (yandleyick)",
+      "guide": "tools/konr-wings/README.md",
+      "source": "tools/konr-wings",
+      "download": "downloads/konr-wings.zip",
+      "purpose": "Display a Rainbow or Deep Black crosshair over Overwatch on the LG GSM5CEC monitor."
+    },
+    {
+      "name": "ILYFFMPEG",
+      "author": "Candlestick (yandleyick)",
+      "url": "https://ilyffmpeg.yandleyick.com/",
+      "purpose": "Download video from a YouTube link, or audio for a still-image upload."
+    },
+    {
+      "name": "ILYMFFMPEG",
+      "author": "Candlestick (yandleyick)",
+      "url": "https://ilymffmpeg.yandleyick.com/",
+      "purpose": "Find the main video player on a linked webpage and download the source file."
+    },
+    {
       "name": "Freestyle editor",
       "author": "Candlestick (yandleyick)",
       "guide": "docs/FREESTYLE.md",
