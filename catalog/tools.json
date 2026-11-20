@@ -676,6 +676,13 @@
       "purpose": "Review passages from a recording, adjust clip boundaries, create captions, and export approved cuts."
     },
     {
+      "name": "Rate Freestyle",
+      "author": "Candlestick (yandleyick)",
+      "guide": "docs/RATE-FREESTYLE.md",
+      "source": "plugins/rate-freestyle-plugin",
+      "purpose": "Rate lyrical complexity, depth, and how ideas build across a passage. Compare performances using timed excerpts."
+    },
+    {
       "name": "Overwatch scanner",
       "author": "Candlestick (yandleyick)",
       "guide": "docs/OVERWATCH.md",

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Rate Freestyle"
+  short_description: "Grade lyrical craft, depth, and connected development."
+  default_prompt: "Use rate-freestyle to evaluate these performances with sourced excerpts, a consistent rubric, and explicit attention to ideas building on one another."
+policy:
+  allow_implicit_invocation: true

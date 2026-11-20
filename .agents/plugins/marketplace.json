@@ -1,0 +1,20 @@
+{
+  "name": "candlestick-creator-toolkit",
+  "interface": {
+    "displayName": "Candlestick Creator Toolkit"
+  },
+  "plugins": [
+    {
+      "name": "rate-freestyle-plugin",
+      "source": {
+        "source": "local",
+        "path": "./plugins/rate-freestyle-plugin"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

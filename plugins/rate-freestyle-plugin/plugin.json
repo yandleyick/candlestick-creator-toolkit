@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "author": {
+    "name": "Candlestick (yandleyick)"
+  },
+  "description": "Evaluate freestyle lyrics with sourced excerpts, consistent grades, and head-to-head comparisons emphasizing connected development.",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "capabilities": [],
+        "defaultPrompt": "Rate these freestyles for complexity, depth, connected development, and accessibility. Use verified source excerpts and explain how each passage builds on itself.",
+        "developerName": "Candlestick (yandleyick)",
+        "displayName": "Rate Freestyle",
+        "longDescription": "Rate complexity, depth, connected development, and accessibility. Select verified timed excerpts and compare performances with source-specific reasons and independent review when requested.",
+        "shortDescription": "Grade freestyle lyrical craft"
+      }
+    }
+  },
+  "name": "rate-freestyle-plugin",
+  "version": "1.0.1"
+}

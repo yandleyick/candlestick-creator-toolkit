@@ -2,6 +2,8 @@
 
 Created by **Candlestick (yandleyick)**. [Windows setup](SETUP.md)
 
+To compare the writing in two selections, use [Rate Freestyle](RATE-FREESTYLE.md) with the reviewed excerpts and their timestamps.
+
 Start with a recording to transcribe it and find candidate excerpts. If you already know your cuts, fill in the [example clip manifest](../config/clips.example.json) with your file paths and times, then open it in the reviewer in step 3.
 
 ## 1. Preserve and inventory the recordings

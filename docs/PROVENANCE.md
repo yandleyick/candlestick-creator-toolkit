@@ -7,5 +7,6 @@ The [package records](../catalog/fmhy-package-lock.json) list the upstream downl
 ## Original workflows by Candlestick (yandleyick)
 
 - The [freestyle editor](FREESTYLE.md) grew out of Candlestick’s freestyle editing projects. It combines timed phrase selection, a local clip reviewer, captions, and export of approved cuts.
+- [Rate Freestyle](RATE-FREESTYLE.md) is Candlestick’s plugin for comparing timed excerpts. This toolkit edition uses the scoring instructions and rubric from version 1.0.1.
 - The [Overwatch scanner](OVERWATCH.md) grew out of Candlestick’s Tracer VOD hunt. Its scripts and calibration images are documented in the [scanner source records](../catalog/script-origins.json).
 - The [restoration workflow](RESTORATION.md) grew out of Candlestick’s Natural v3 process. Candlestick wrote the frame recovery workflow. The guide credits the upstream restoration models separately.
