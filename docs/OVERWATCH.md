@@ -1,4 +1,6 @@
-# Finding moments in Overwatch footage
+# Overwatch scanner
+
+Created by **Candlestick (yandleyick)**. [Setup instructions](SETUP.md)
 
 There are two different editorial tasks. Declare the intended task before scanning:
 
@@ -38,7 +40,7 @@ Outputs include every sampled OCR observation, potential events, potential death
 
 Confirm the large killer name, the first hero portrait, the victim, and the outcome. Exclude assists, deployables, another POV, killcam/POTG replays counted twice, wrong heroes, and duplicated feed observations. Check for a missed own death, round transition, hero change, or alias switch through the entire interval. Resurrection/re-kill events can be merged by the scanner's nine-second deduplication logic; inspect them explicitly.
 
-Make a clip manifest using `config/clips.example.json`, with actual local-file IN/OUT times and meaningful context before the first event and after the outcome. Use `scripts/review.py` to record decisions and `scripts/media.py export` to render accepted clips. Preserve uncertainty and reviewed exclusions instead of deleting the evidence.
+Review each candidate in your video editor. Record the local-file IN and OUT times, the original VOD offset, and why you kept or rejected the clip. Leave enough footage before the first event and after the outcome to follow the encounter.
 
 For enemy-Tracer focus grading, judge the complete connected engagement. Sustained attention, crosshair placement, turning, and reacquisition matter. Do not trim away weak earlier attention merely to inflate the grade. Healing to full does not automatically start a new encounter. Keep encounter focus, overall suitability, duration, and outcome eligibility in separate fields. A deliberately accepted surprise Pulse or useful killcam can justify a keep without falsely raising the encounter's focus score. Only apply these exceptions when the project's requested editorial rules permit them.
 
