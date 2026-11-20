@@ -2,7 +2,9 @@
 
 [Download Konr Wings for Windows x64](https://raw.githubusercontent.com/yandleyick/candlestick-creator-toolkit/main/downloads/konr-wings.zip)
 
-Extract the ZIP and double-click `Konr Wings.exe`. The wings appear at the center of the Overwatch window while it has focus on an LG monitor with hardware ID `GSM5CEC`. Switching away from the game hides the overlay. The two transparent PNGs in the ZIP can also be used on their own.
+Extract the ZIP and double-click `Konr Wings.exe`. The wings appear at the center of the Overwatch window while it has focus. Move the game to another monitor and the overlay follows automatically. If the window spans two screens, its center determines which display supplies the scale and HDR settings. Switching away from the game hides the wings.
+
+If you are upgrading from an earlier build, choose **Exit** from its system tray menu before opening the new EXE. The download also includes the Rainbow and Deep Black transparent PNGs.
 
 | Control | Action |
 | --- | --- |

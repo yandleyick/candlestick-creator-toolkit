@@ -30,11 +30,13 @@ static HINSTANCE instance;
 static HICON icon;
 static UINT taskbarCreated;
 static HWINEVENTHOOK foregroundHook;
-static bool black, hidden, hasDisplay, gameActive;
+static bool black, hidden, gameActive, needsPaint=true;
 static bool colorKey, visibilityKey;
 static const BYTE *art;
 static int canvas;
+static int renderWidth;
 static HMONITOR monitor;
+static ULONGLONG retryGraphicsAt;
 static float brightness=1;
 static HRESULT graphicsResult=S_OK;
 static ComPtr<ID3D11Device> device;
@@ -48,18 +50,6 @@ static void releaseGraphics() {
     visual.Reset(); target.Reset(); composition.Reset(); swapchain.Reset();
     context.Reset(); device.Reset();
 }
-static BOOL CALLBACK findLG(HMONITOR m,HDC,LPRECT,LPARAM result) {
-    MONITORINFOEXW info={}; info.cbSize=sizeof(info);
-    if(!GetMonitorInfoW(m,&info)) return TRUE;
-    DISPLAY_DEVICEW d={}; d.cb=sizeof(d);
-    for(DWORD i=0;EnumDisplayDevicesW(info.szDevice,i,&d,0);i++) {
-        if((d.StateFlags & DISPLAY_DEVICE_ACTIVE) && wcsstr(d.DeviceID,L"GSM5CEC")) {
-            *reinterpret_cast<HMONITOR*>(result)=m; return FALSE;
-        }
-    }
-    return TRUE;
-}
-
 #define TRY_HR(call) do { HRESULT result_=(call); if(FAILED(result_)) return result_; } while(0)
 static HRESULT initializeSurface() {
     ComPtr<IDXGIFactory2> factory;
@@ -85,10 +75,14 @@ static HRESULT initializeSurface() {
             break;
         }
     }
-    if(!match) return DXGI_ERROR_NOT_FOUND;
-    TRY_HR(D3D11CreateDevice(match.Get(),D3D_DRIVER_TYPE_UNKNOWN,nullptr,
+    HRESULT created=D3D11CreateDevice(match.Get(),match?D3D_DRIVER_TYPE_UNKNOWN:D3D_DRIVER_TYPE_HARDWARE,nullptr,
         D3D11_CREATE_DEVICE_BGRA_SUPPORT,nullptr,0,D3D11_SDK_VERSION,
-        device.GetAddressOf(),nullptr,context.GetAddressOf()));
+        device.GetAddressOf(),nullptr,context.GetAddressOf());
+    if(FAILED(created)) {
+        brightness=1;
+        TRY_HR(D3D11CreateDevice(nullptr,D3D_DRIVER_TYPE_WARP,nullptr,D3D11_CREATE_DEVICE_BGRA_SUPPORT,
+            nullptr,0,D3D11_SDK_VERSION,device.ReleaseAndGetAddressOf(),nullptr,context.ReleaseAndGetAddressOf()));
+    }
     DXGI_SWAP_CHAIN_DESC1 sd={};
     sd.Width=sd.Height=canvas;
     sd.Format=DXGI_FORMAT_R16G16B16A16_FLOAT;
@@ -150,16 +144,16 @@ static HRESULT paintArt(int width) {
 static void tray(DWORD action) {
     NOTIFYICONDATAW n={}; n.cbSize=sizeof(n); n.hWnd=manager; n.uID=1;
     n.uFlags=NIF_ICON|NIF_MESSAGE|NIF_TIP; n.hIcon=icon; n.uCallbackMessage=TrayMessage;
-    const wchar_t* state=!hasDisplay?L"LG disconnected":FAILED(graphicsResult)?L"Display unavailable":
-        hidden?L"Hidden":!gameActive?L"Waiting for Overwatch":black?L"Deep Black":brightness>1?L"HDR Rainbow":L"Rainbow";
+    const wchar_t* state=hidden?L"Hidden":!gameActive?L"Waiting for Overwatch":FAILED(graphicsResult)?L"Display unavailable":
+        black?L"Deep Black":brightness>1?L"HDR Rainbow":L"Rainbow";
     swprintf(n.szTip,ARRAYSIZE(n.szTip),L"Konr Wings | %ls",state);
     SetWindowTextW(overlay,n.szTip);
     Shell_NotifyIconW(action,&n);
 }
 
-static bool overwatchCenter(POINT& center) {
+static bool overwatchCenter(POINT& center, RECT& client) {
     HWND window=GetForegroundWindow();
-    if(!window || !monitor || IsIconic(window) || !IsWindowVisible(window)) return false;
+    if(!window || IsIconic(window) || !IsWindowVisible(window)) return false;
     DWORD pid=0;
     GetWindowThreadProcessId(window,&pid);
     HANDLE process=OpenProcess(PROCESS_QUERY_LIMITED_INFORMATION,FALSE,pid);
@@ -172,52 +166,60 @@ static bool overwatchCenter(POINT& center) {
     const wchar_t* slash=wcsrchr(path,L'\\');
     if(_wcsicmp(slash?slash+1:path,L"Overwatch.exe")!=0) return false;
 
-    RECT client={};
-    if(!GetClientRect(window,&client) || client.right<canvas || client.bottom<canvas) return false;
+    if(!GetClientRect(window,&client) || client.right<=0 || client.bottom<=0) return false;
     center={client.right/2,client.bottom/2};
-    return ClientToScreen(window,&center) && MonitorFromPoint(center,MONITOR_DEFAULTTONULL)==monitor;
+    return ClientToScreen(window,&center)!=FALSE;
 }
 
-static void syncVisibility(bool raiseWindow) {
+static void syncVisibility(bool raiseWindow, bool displayChanged=false) {
     POINT center={};
-    const bool active=overwatchCenter(center);
-    const bool show=active && !hidden && SUCCEEDED(graphicsResult) && visual;
+    RECT client={};
+    HMONITOR found=overwatchCenter(center,client)?MonitorFromPoint(center,MONITOR_DEFAULTTONULL):nullptr;
+    MONITORINFO info={sizeof(info)};
+    const bool active=found && GetMonitorInfoW(found,&info);
+    bool updateTray=raiseWindow || active!=gameActive;
+    gameActive=active;
+    // A display mode or HDR change can arrive while the game is in the background.
+    if(displayChanged) monitor=nullptr;
+    if(!active || hidden) {
+        if(IsWindowVisible(overlay)) ShowWindow(overlay,SW_HIDE);
+        if(updateTray) tray(NIM_MODIFY);
+        return;
+    }
+
+    // Preserve the original 16:9 sizing without stretching the wings on ultrawides.
+    const RECT& r=info.rcMonitor;
+    const int width=std::min(r.right-r.left,(r.bottom-r.top)*16/9);
+    const int side=2*(int)std::ceil(32.*width/1920.);
+    const int x=center.x-side/2, y=center.y-side/2;
+    const bool newTarget=found!=monitor || width!=renderWidth;
+    if(newTarget || (FAILED(graphicsResult) && GetTickCount64()>=retryGraphicsAt)) {
+        ShowWindow(overlay,SW_HIDE);
+        releaseGraphics();
+        monitor=found; renderWidth=width; canvas=side;
+        SetWindowPos(overlay,nullptr,x,y,side,side,SWP_NOACTIVATE|SWP_NOZORDER);
+        graphicsResult=initializeSurface();
+        needsPaint=true;
+        updateTray=true;
+        retryGraphicsAt=GetTickCount64()+3000;
+    }
+    if(needsPaint && SUCCEEDED(graphicsResult)) {
+        graphicsResult=paintArt(width);
+        needsPaint=false;
+        if(FAILED(graphicsResult)) retryGraphicsAt=GetTickCount64()+3000;
+        updateTray=true;
+    }
+    const bool show=SUCCEEDED(graphicsResult) && visual && client.right>=canvas && client.bottom>=canvas;
     const bool visible=IsWindowVisible(overlay)!=FALSE;
     if(show) {
         RECT old={};
         GetWindowRect(overlay,&old);
-        const int x=center.x-canvas/2, y=center.y-canvas/2;
         if(!visible || raiseWindow || old.left!=x || old.top!=y || old.right-old.left!=canvas)
             SetWindowPos(overlay,HWND_TOPMOST,x,y,canvas,canvas,SWP_NOACTIVATE|SWP_SHOWWINDOW);
     } else if(visible) {
         ShowWindow(overlay,SW_HIDE);
     }
-    if(gameActive!=active) {
-        gameActive=active;
-        tray(NIM_MODIFY);
-    }
-}
-static void refresh(bool rebuild) {
-    HMONITOR found=nullptr;
-    EnumDisplayMonitors(nullptr,nullptr,findLG,(LPARAM)&found);
-    hasDisplay=found!=nullptr;
-    if(!found) {
-        ShowWindow(overlay,SW_HIDE); releaseGraphics(); monitor=nullptr; gameActive=false; tray(NIM_MODIFY); return;
-    }
-    MONITORINFO info={sizeof(info)};
-    GetMonitorInfoW(found,&info);
-    const RECT r=info.rcMonitor;
-    const int width=r.right-r.left;
-    const int side=2*(int)std::ceil(32.*width/1920.);
-    rebuild=rebuild||found!=monitor||canvas!=side||!visual;
-    monitor=found; canvas=side;
-    if(rebuild) {
-        releaseGraphics();
-        graphicsResult=initializeSurface();
-    }
-    if(SUCCEEDED(graphicsResult)) graphicsResult=paintArt(width);
-    syncVisibility(true);
-    tray(NIM_MODIFY);
+    if(updateTray) tray(NIM_MODIFY);
 }
 static void menu() {
     HMENU m=CreatePopupMenu();
@@ -243,9 +245,10 @@ static void command(UINT c) {
     if(c==Show) hidden=false;
     if(c==Black||c==Rainbow||c==ToggleStyle) {
         black=c==ToggleStyle?!black:c==Black; hidden=false;
+        needsPaint=true;
         DWORD b=black; RegSetKeyValueW(HKEY_CURRENT_USER,PrefKey,L"Black",REG_DWORD,&b,sizeof b);
     }
-    refresh(false);
+    syncVisibility(true);
 }
 static void CALLBACK foreground(HWINEVENTHOOK,DWORD,HWND,LONG,LONG,DWORD,DWORD) {
     if(manager) PostMessageW(manager,FocusChanged,0,0);
@@ -258,7 +261,7 @@ static LRESULT CALLBACK managerProc(HWND hwnd,UINT msg,WPARAM w,LPARAM l) {
     case WM_DISPLAYCHANGE: case WM_SETTINGCHANGE: case WM_DEVICECHANGE:
         SetTimer(hwnd,DisplayTimer,400,nullptr); return 0;
     case WM_TIMER:
-        if(w==DisplayTimer) { KillTimer(hwnd,DisplayTimer); refresh(true); }
+        if(w==DisplayTimer) { KillTimer(hwnd,DisplayTimer); syncVisibility(true,true); }
         else if(w==VisibilityTimer) syncVisibility(false);
         return 0;
     case FocusChanged:
@@ -323,8 +326,8 @@ int WINAPI wWinMain(HINSTANCE h,HINSTANCE,LPWSTR args,int) {
     visibilityKey=RegisterHotKey(manager,ToggleVisible,MOD_CONTROL|MOD_ALT|MOD_NOREPEAT,'H')!=0;
     foregroundHook=SetWinEventHook(EVENT_SYSTEM_FOREGROUND,EVENT_SYSTEM_FOREGROUND,nullptr,foreground,0,0,
         WINEVENT_OUTOFCONTEXT);
-    SetTimer(manager,VisibilityTimer,750,nullptr);
-    if(requested==Menu) refresh(true); else command(requested);
+    SetTimer(manager,VisibilityTimer,250,nullptr);
+    if(requested==Menu) syncVisibility(true); else command(requested);
     MSG msg;
     while(GetMessageW(&msg,nullptr,0,0)>0) { TranslateMessage(&msg); DispatchMessageW(&msg); }
     releaseGraphics(); DestroyWindow(overlay); CoUninitialize(); CloseHandle(single);

@@ -166,7 +166,7 @@ Many entries were discovered through [FMHY](https://fmhy.net/). The [catalog](ca
 
 I made these tools and workflows. [Windows setup](docs/SETUP.md)
 
-- **[Konr Wings](tools/konr-wings)** — Overwatch crosshair overlay for the LG `GSM5CEC` display. Press **Ctrl + Alt + W** to switch between Rainbow and Deep Black. [Download for Windows](https://raw.githubusercontent.com/yandleyick/candlestick-creator-toolkit/main/downloads/konr-wings.zip)
+- **[Konr Wings](tools/konr-wings)** — A Windows crosshair overlay that follows Overwatch from one monitor to another. Press **Ctrl + Alt + W** to switch between Rainbow and Deep Black. [Download for Windows](https://raw.githubusercontent.com/yandleyick/candlestick-creator-toolkit/main/downloads/konr-wings.zip)
 - **[ILYFFMPEG](https://ilyffmpeg.yandleyick.com/)** — Paste a YouTube link to download video, or audio for a still-image upload.
 - **[ILYMFFMPEG](https://ilymffmpeg.yandleyick.com/)** — Paste a webpage link to find its main video player and download the source file.
 - **[Freestyle editor](docs/FREESTYLE.md)** — Review passages from a recording, adjust clip boundaries, create captions, and export approved cuts. [Source](scripts/media.py)

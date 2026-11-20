@@ -674,7 +674,7 @@
       "guide": "tools/konr-wings/README.md",
       "source": "tools/konr-wings",
       "download": "downloads/konr-wings.zip",
-      "purpose": "Display a Rainbow or Deep Black crosshair over Overwatch on the LG GSM5CEC monitor."
+      "purpose": "Display a Rainbow or Deep Black crosshair on whichever monitor contains the center of the Overwatch window."
     },
     {
       "name": "ILYFFMPEG",
