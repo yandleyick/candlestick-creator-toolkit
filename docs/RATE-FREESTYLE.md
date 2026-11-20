@@ -13,7 +13,11 @@ codex plugin add rate-freestyle-plugin@candlestick-creator-toolkit
 
 ## Try it
 
-Attach two excerpts from the [freestyle editor](FREESTYLE.md), or paste timestamped transcripts with performer labels. Then ask:
+I use Rate Freestyle with long, timestamped transcripts of practice VODs to find passages worth clipping. Try this with a transcript attached.
+
+> Find three standout passages in this practice session. Give me the start and end time for each so I can jump back to the recording. Score the writing for complexity and depth, and show where a later bar pays off an earlier setup.
+
+For a head-to-head comparison, attach two excerpts from the [freestyle editor](FREESTYLE.md) or paste timestamped transcripts with performer labels.
 
 > Use Rate Freestyle to compare these two verses. Score complexity, depth, and connected development. For each verse, give the timestamp of the strongest setup and payoff and explain how the payoff changes the meaning of the setup.
 
